@@ -1,0 +1,20 @@
+{
+  "name": "peakingFilter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx node-gyp configure build",
+    "install": "npx node-gyp configure build"
+  },
+  "keywords": [],
+  "author": "ChefyHase <chefyhase@gmail.com> (http://chefyhase.example.com)",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.14.0",
+    "node-gyp": "^4.0.0",
+    "wav-decoder": "^1.3.0",
+    "wav-encoder": "^1.3.0"
+  }
+}
