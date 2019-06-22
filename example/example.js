@@ -9,10 +9,9 @@ const encode = require('wav-encoder');
     freq: 1000,
     q: 3.0,
     gain: 10.0,
-    bw: 1,
     samplerate: 44100
   };
-  
+
   let inputBuffer = fs.readFileSync(path.join(__dirname, 'noise.wav'));
   inputBuffer = await decode.decode(inputBuffer);
   let L = inputBuffer.channelData[0];

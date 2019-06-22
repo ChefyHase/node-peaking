@@ -17,8 +17,7 @@ NAN_METHOD(filter)
   auto freq = Nan::To<v8::Number>(info[2]).ToLocalChecked();
   auto q = Nan::To<v8::Number>(info[3]).ToLocalChecked();
   auto gain = Nan::To<v8::Number>(info[4]).ToLocalChecked();
-  auto bw = Nan::To<v8::Number>(info[5]).ToLocalChecked();
-  auto samplerate = Nan::To<v8::Uint32>(info[6]).ToLocalChecked();
+  auto samplerate = Nan::To<v8::Uint32>(info[5]).ToLocalChecked();
   const int length = size->Value();
 
   // native float array factory
@@ -36,7 +35,6 @@ NAN_METHOD(filter)
           freq->Value(),
           q->Value(),
           gain->Value(),
-          bw->Value(),
           samplerate->Value());
 
   // output array factory
