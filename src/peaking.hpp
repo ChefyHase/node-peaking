@@ -11,7 +11,7 @@ void peaking( float input[],
               float samplerate )
 {
   float omega = 2.0f * 3.14159265f * freq / samplerate;
-  float bw = q / freq;
+  float bw = freq / q;
   float alpha = sin( omega ) * sinh( log( 2.0f ) / 2.0 * bw * omega / sin( omega ) );
   float A = pow( 10.0f, ( gain / 40.0f ) );
 
